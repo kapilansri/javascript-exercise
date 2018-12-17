@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Javascript</title>
+
+  </head>
+  <body>
+    <!-- Start Square root -->
+    <input type="text" name="square-root" value="" placeholder="Enter the number" id="enter-squar-root-number">
+    <button type="button" onclick="square()" name="cal-square-root">square-root</button>
+    <p id="print-square-root"></p>
+    <!-- End Square root -->
+
+    <hr><br>
+
+      Enter the first number   <input type="text" name="no1" value="" id="num1">
+      Enter the secound number <input type="text" name="no2" value="" id="num2">
+      <button type="button" onclick="addNum()" name="cal-value">add two no</button>
+      <button type="button" onclick="multiNum()" name="cal-value">multi two no</button>
+      <button type="button" onclick="subtractNum()" name="cal-value">sub two no</button>
+      <button type="button" onclick="divideNum()" name="cal-value">div two no</button>
+      <p id="print-value"></p>
+
+    <hr><br>
+
+      <button type="button" onclick="helloworld()" name="ue">alert button</button><br><br>
+
+    <hr><br>
+
+    Enter the length <input type="text" name="len" value="" id="length">
+    Enter the width <input type="text" name="wid" value="" id="width">
+    Enter the height <input type="text" name="hei" value="" id="height">
+    <button type="button" onclick="cuboidVol()" name="">volume of cuboid</button>
+
+    <p id="vol"></p>
+
+    <br><hr>
+
+    <p id="obje" ></p>
+
+    <br><hr>
+
+    <p id="course"></p>
+
+    <script type="text/javascript">
+
+    // square-root
+      function square() {
+        var inputno = document.getElementById('enter-squar-root-number').value;
+        var calroot = inputno*inputno;
+        document.getElementById('print-square-root').innerHTML= inputno + " Squar root is " + calroot;
+      }
+    // End square-root
+
+
+    function addNum() {
+      var num1 = parseInt(document.getElementById('num1').value);
+      var num2 = parseInt(document.getElementById('num2').value);
+      var addno = num1 + num2;
+      document.getElementById('print-value').innerHTML= num1 + " + " + num2 + " = " + addno;
+    }
+
+
+    function multiNum() {
+      var num1 = parseInt(document.getElementById('num1').value);
+      var num2 = parseInt(document.getElementById('num2').value);
+      var multino = num1 * num2;
+      document.getElementById('print-value').innerHTML= num1 + " * " + num2 + " = " + multino;
+    }
+
+
+
+    function subtractNum() {
+      var num1 = parseInt(document.getElementById('num1').value);
+      var num2 = parseInt(document.getElementById('num2').value);
+      var subno = num1 - num2;
+      document.getElementById('print-value').innerHTML= num1 + " - " + num2 + " = " + subno;
+    }
+
+
+
+    function divideNum() {
+      var num1 = parseInt(document.getElementById('num1').value);
+      var num2 = parseInt(document.getElementById('num2').value);
+      var divno = num1 / num2;
+      document.getElementById('print-value').innerHTML= num1 + " / " + num2 + " = " + divno;
+    }
+
+    function helloworld() {
+      window.alert('Hello World');
+
+    }
+
+    function cuboidVol(){
+      var length = parseInt(document.getElementById('length').value);
+      var width = parseInt(document.getElementById('width').value);
+      var height = parseInt(document.getElementById('height').value);
+      var volume = length*width*height;
+      document.getElementById('vol').innerHTML= "cuboid volume is " + volume
+
+    }
+
+    var person = {
+      firstname:'Nimal',
+      lastname: 'Raja',
+      age: 15,
+      city:'kandy'
+    };
+    document.getElementById('obje').innerHTML = " My name is " + person.firstname + person.lastname +
+    ". " + " I'am " + person.age + " years old. " + " I live in " + person.city + ".";
+
+
+    var course = {
+      courseName: "BIT",
+      courseFee: "Rs 150,000.00",
+      startDate: "12.05.2018",
+      center: "Oue Office"
+    }
+    document.getElementById('course').innerHTML= "Course Name : " + course.courseName + "<br>" +
+    "Course Fee : " + course.courseFee + "<br>" +
+    "Start Date : " + course.startDate + "<br>" +
+    "Center : " + course.center + "<br>"
+    </script>
+
+  </body>
+</html>
